@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../JS/calcu.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../CSS/calculator.css">
+</head>
+<body>
+
+    <div class="container m-5">
+        <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Calculator</h1>
+          <div class="row">
+              
+              <div class="col1">
+                <table>
+                    <tr>
+                        <td colspan="4"><input type="text" value='' id='ans'></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="C" onclick="ans.value=''" class="btn-light"></td>
+                        <td><input type="button" value="/" onclick="ans.value+='/'" class="btn-light"></td>
+                        <td><input type="button" value="x" onclick="ans.value+='*'" class="btn-light"></td>
+                        <td><input type="button" value="+" onclick="ans.value+='+'" class="btn-light"></td>
+                    </tr>
+    
+                    <tr>
+                        <td><input type="button" value="7" onclick="ans.value+='7'" class="btn-light"></td>
+                        <td><input type="button" value="8" onclick="ans.value+='8'" class="btn-light"></td>
+                        <td><input type="button" value="9" onclick="ans.value+='9'" class="btn-light"></td>
+                        <td><input type="button" value="-" onclick="ans.value+='-'" class="btn-light"></td>
+                    </tr>
+    
+                    <tr>
+                        <td><input type="button" value="4" onclick="ans.value+='4'" class="btn-light"></td>
+                        <td><input type="button" value="5" onclick="ans.value+='5'" class="btn-light"></td>
+                        <td><input type="button" value="6" onclick="ans.value+='6'" class="btn-light"></td>
+                        <td rowspan="3"><button id='equal' onclick="solution()" class="btn-secondary" >=</button></td>
+                    </tr>
+    
+                    <tr>
+                        <td><input type="button" value="1" onclick="ans.value+='1'" class="btn-light"></td>
+                        <td><input type="button" value="2" onclick="ans.value+='2'" class="btn-light"></td>
+                        <td><input type="button" value="3" onclick="ans.value+='3'" class="btn-light"></td>
+                    </tr>
+    
+                    <tr>
+                        <td><input type="button" value="%" onclick="ans.value+='%'" class="btn-light"></td>
+                        <td><input type="button" value="0" onclick="ans.value+='0'" class="btn-light"></td>
+                        <td><input type="button" value="." onclick="ans.value+='.'" class="btn-light"></td>
+                    </tr>
+    
+    
+                </table>
+                  
+              
+              </div> 
+              <div class="col p5 info">
+               <span>
+                    <span><span id="History">History</span>
+                    <button onclick="clearr()" class="btn btn-danger">clear</button> </span> 
+                    
+            </span>          
+                <p id='para'></p>
+              </div>
+              </div>
+             
+          </div>
+
+          
+    
+
+</body>
+</html>
